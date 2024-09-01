@@ -129,7 +129,7 @@
                 const name = document.getElementById('newName').value;
                 const email = document.getElementById('newEmail').value;
 
-                fetch('http://localhost:3000/api/users', {
+                fetch('https://nebulaapi.onrender.com/api/users', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -164,7 +164,7 @@
                 const name = document.getElementById('name').value;
                 const email = document.getElementById('email').value;
 
-                fetch(`http://localhost:3000/api/users/${userId}`, {
+                fetch(`https://nebulaapi.onrender.com/api/users/${userId}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
@@ -187,7 +187,7 @@
             function handleEdit(event) {
                 const userId = event.target.dataset.id;
 
-                fetch(`http://localhost:3000/api/users/${userId}`)
+                fetch(`https://nebulaapi.onrender.com/api/users/${userId}`)
                     .then(response => response.json())
                     .then(user => {
                         document.getElementById('userId').value = user._id;
@@ -210,7 +210,7 @@
                     cancelButtonText: 'Cancelar'
                 }).then(result => {
                     if (result.isConfirmed) {
-                        fetch(`http://localhost:3000/api/users/${userId}`, {
+                        fetch(`https://nebulaapi.onrender.com/api/users/${userId}`, {
                             method: 'DELETE'
                         })
                         .then(() => {
