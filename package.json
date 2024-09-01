@@ -1,0 +1,29 @@
+{
+  "name": "crudreact",
+  "version": "1.0.0",
+  "description": "HOLA MUNDOOO",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npx postcss src/styles/tailwind.css -o public/styles.css"
+  },
+  "author": "SRD",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.4",
+    "nodemon": "^3.1.4",
+    "path": "^0.12.7",
+    "postcss": "^8.4.41",
+    "postcss-cli": "^11.0.0",
+    "sweetalert2": "^11.12.4"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
+  }
+}
