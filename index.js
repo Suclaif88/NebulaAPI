@@ -5,14 +5,10 @@ const User = require('./models/userModel');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
-mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
+mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('Conectado a MongoDB exitosamente'))
     .catch(err => console.error('Error conectando a MongoDB:', err));
 
@@ -80,6 +76,6 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.listen(port, () => {
-    console.log(`Servidor corriendo en http://localhost:${port}`);
+app.listen(process.env.PORT, () => {
+    console.log(`Servidor corriendo en el puerto ${process.env.PORT}`);
 });
